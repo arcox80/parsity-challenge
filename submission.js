@@ -9,7 +9,7 @@ const findSum = array => {
 const findFrequency = arr => {
   let mostLeast = {};
   const totalsObj = arr.reduce((acc, val) => {
-    acc[val] = (acc[val] || 0) + 1;
+    acc[val] ? acc[val] += 1 : acc[val] = 1;
     return acc;
   }, {});
   mostLeast.most = Object.keys(totalsObj).reduce((a, b) => totalsObj[a] > totalsObj[b] ? a : b);
