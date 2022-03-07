@@ -30,7 +30,7 @@ const largestPair = array => {
     prevEl = el;
     return pairProduct;
   });
-  return products.reduce((currentLargest, possibleLargest) => (currentLargest > possibleLargest ? currentLargest : possibleLargest));
+  return Math.max(...products);
 };
 
 const removeParenth = str => {
